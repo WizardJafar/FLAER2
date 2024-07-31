@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Флаер</title>
+    <style>
+        #full-menu {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center h-screen">
+    <div class="w-1/3 p-6">
+        <div
+            class="bg-base-300 glass rounded-lg border-2 border-purple-700 shadow-xl shadow-purple-700 overflow-hidden">
+            <img class="w-full h-64"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWzPDOcBg_X5RiBMNU_GaDHktUcEuUTbkQTw&s"
+                alt="Фоновое изображение">
+            <div class="p-6 flex flex-col items-center justify-center">
+                <h2 class="text-2xl font-bold mb-2 text-purple-800 drop-shadow-xl decoration-purple-800">We are working
+                    every day 24/7</h2>
+                <p class=" drop-shadow-xl decoration-purple-800 mb-4">Discover our delicious offerings at Food and Drink
+                    Bistro. Here's a sneak
+                    peek at our menu:</p>
+
+                <button id="toggle-button"
+                    class="mt-6 glass rounded-lg border-2 border-purple-700 shadow-xl shadow-purple-700 bg-purple-700 px-4 py-2">Check
+                    Full Menu</button>
+                <button id="special-offer-button"
+                    class="mt-6 glass rounded-lg text-purple-700 border-2 border-amber-500 shadow-xl shadow-amber-500 bg-amber-500 px-4 py-2"><a
+                        href="sigma.html">Special Offer!</a></button>
+                <label class="swap swap-rotate mt-5">
+
+                    <input type="checkbox" class="theme-controller" value="luxury" onchange="toggleTheme()" />
+                    <svg class="swap-off h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                    </svg>
+
+                    <svg class="swap-on h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                    </svg>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div id="full-menu"
+        class="container mx-auto bg-base-300 glass rounded-lg border-2 border-purple-700 shadow-xl shadow-purple-700 overflow-hidden mt-10">
+
+        <section class="w-full flex justify-center text-center">
+            <h3 class="text-xl font-semibold text-purple-800 mb-2">Appetizers</h3>
+            <ul class="text-left">
+                <li class="mb-2"><strong>Caesar Salad</strong> - Crisp romaine lettuce, Caesar dressing, croutons,
+                    and parmesan - $7.95</li>
+                <li class="mb-2"><strong>Chicken Wings</strong> - Spicy or BBQ served with celery and blue cheese
+                    dressing - $9.50</li>
+                <li class="mb-2"><strong>Garlic Shrimp</strong> - Shrimp sautéed in garlic butter sauce - $10.95
+                </li>
+            </ul>
+        </section>
+
+        <section class="w-full mt-4">
+            <h3 class="flex justify-center text-center text-xl font-semibold text-purple-800 ">Main Courses</h3>
+            <ul class="text-left">
+                <li class="flex justify-center text-center"><strong>Vegetarian Lasagna</strong> - Layers of pasta,
+                    ricotta cheese, spinach, and
+                    marinara sauce - $13.50</li>
+                <li class="flex justify-center text-center"><strong>Fish and Chips</strong> - Crispy battered fish
+                    served with tartar sauce and
+                    fries - $15.95</li>
+                <li class="flex justify-center text-center"><strong>Grilled Salmon</strong> - Fresh salmon fillet with a
+                    lemon butter sauce -
+                    $18.95</li>
+                <li class="flex justify-center text-center"><strong>Beef Stroganoff</strong> - Tender beef in a rich
+                    mushroom sauce over egg
+                    noodles - $16.95</li>
+            </ul>
+        </section>
+
+        <section class="w-full text-center mt-4">
+            <h3 class="text-xl font-semibold text-purple-800 mb-2">Sandwiches & Burgers</h3>
+            <ul class="text-left">
+                <li class="flex justify-center text-center"><strong>Veggie Wrap</strong> - Grilled vegetables, hummus,
+                    and mixed greens in a
+                    whole wheat wrap - $10.50</li>
+                <li class="flex justify-center text-center"><strong>Pulled Pork Sandwich</strong> - Slow-cooked pork
+                    with BBQ sauce and
+                    coleslaw - $12.95</li>
+                <li class="flex justify-center text-center"><strong>Chicken Caesar Wrap</strong> - Grilled chicken,
+                    Caesar dressing, romaine
+                    lettuce in a wrap - $11.50</li>
+                <li class="flex justify-center text-center"><strong>Philly Cheesesteak</strong> - Sliced steak, melted
+                    cheese, peppers, and
+                    onions on a hoagie roll - $13.50</li>
+            </ul>
+        </section>
+
+        <section class="w-full text-center mt-4">
+            <h3 class="text-xl font-semibold text-purple-800 mb-2">Pizzas</h3>
+            <ul class="text-left">
+                <li class="flex justify-center text-center"><strong>BBQ Chicken</strong> - BBQ sauce, grilled chicken,
+                    red onions, and cilantro
+                    - $13.50</li>
+                <li class="flex justify-center text-center"><strong>Veggie Delight</strong> - Bell peppers, olives,
+                    onions, mushrooms, and
+                    mozzarella - $12.00</li>
+                <li class="flex justify-center text-center"><strong>Four Cheese</strong> - Mozzarella, cheddar,
+                    parmesan, and gorgonzola -
+                    $13.00</li>
+                <li class="flex justify-center text-center"><strong>Hawaiian</strong> - Ham, pineapple, and mozzarella -
+                    $12.50</li>
+            </ul>
+        </section>
+
+        <section class="w-full text-center mt-4">
+            <h3 class="text-xl font-semibold text-purple-800 mb-2">Desserts</h3>
+            <ul class="text-left">
+                <li class="flex justify-center text-center"><strong>Cheesecake</strong> - Creamy cheesecake with a
+                    graham cracker crust,
+                    available in various flavors - $6.50</li>
+                <li class="flex justify-center text-center"><strong>Ice Cream Sundae</strong> - Vanilla ice cream topped
+                    with chocolate sauce,
+                    whipped cream, and a cherry - $5.50</li>
+                <li class="flex justify-center text-center"><strong>Apple Pie</strong> - Classic apple pie served with a
+                    scoop of vanilla ice
+                    cream - $6.95</li>
+                <li class="flex justify-center text-center"><strong>Banana Split</strong> - Sliced banana with ice
+                    cream, chocolate syrup, and
+                    nuts - $7.50</li>
+            </ul>
+        </section>
+
+        <section class="w-full text-center mt-4">
+            <h3 class="text-xl font-semibold text-purple-800 mb-2">Beverages</h3>
+            <ul class="text-left">
+                <li class="flex justify-center text-center"><strong>Coffee & Tea</strong> - Espresso, cappuccino, latte,
+                    herbal teas - $3.00
+                </li>
+                <li class="flex justify-center text-center"><strong>Smoothies</strong> - Mixed berry, tropical, or green
+                    smoothie - $5.50</li>
+                <li class="flex justify-center text-center"><strong>Beer & Wine</strong> - Selection of local and
+                    international beers and wines
+                    - Prices vary</li>
+                <li class="flex justify-center text-center"><strong>Mocktails</strong> - Non-alcoholic cocktails with
+                    various flavors - $4.50
+                </li>
+                <li class="flex justify-center text-center"><strong>Specialty Coffee</strong> - Flavored lattes,
+                    cappuccinos, and more - $4.00
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
